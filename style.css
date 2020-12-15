@@ -1,0 +1,291 @@
+body, html {
+    min-width: 100%;
+    background: url(../images/background5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -5%;
+}
+
+.body {
+    overflow: hidden;
+}
+
+.position {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 21%;
+    margin-left: 3%;
+}
+
+.lumos {
+    border-radius: 3px;
+    animation: clignote 1s infinite  
+}
+
+@keyframes clignote {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.grinch1 {
+    animation: wind 5s cubic-bezier(0.55, 0.01, 0.60, 0.99) infinite alternate;
+    perspective: 100px;
+}
+
+@keyframes wind {
+    to {
+        transform: translateX(-30px);
+    }
+}
+
+.grinch2 {
+    animation: wind1 5s cubic-bezier(0.55, 0.01, 0.60, 0.99) infinite alternate;
+    perspective: 100px;
+}
+
+@keyframes wind1 {
+    to {
+        transform: translateX(20px);
+    }
+}
+
+.snow2 {
+    perspective: 100px;
+    animation: fall 3s linear infinite;
+    transform: translateZ(1000px);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-30px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scaleUpDown {
+    0%, 100% {
+        transform: scaleY(1) scaleX(1);
+    }
+    50%, 90% {
+        transform: scaleY(1.1);
+    }
+    75% {
+        transform: scaleY(0.95);
+    }
+    80% {
+        transform: scaleX(0.95);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: skewX(0) scale(1);
+    }
+    50% {
+        transform: skewX(5deg) scale(0.9);
+    }
+}
+
+@keyframes particleUp {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: -100%;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        background-color: #ef5a00;
+    }
+    50% {
+        background-color: #ff7800;
+    }
+}
+
+.fire {
+    position: absolute;
+    top: calc(65% - 50px);
+    left: calc(44% - 50px);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+
+}
+
+.fire-main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: scaleUpDown 3s ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.fire-main .main-fire {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-main .particle-fire {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    background-color: #ef5a00;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px #d43322);
+    animation: particleUp 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.fire-right {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: shake 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.fire-right .main-fire {
+    position: absolute;
+    top: 10%;
+    right: -25%;
+    width: 80%;
+    height: 80%;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-right .particle-fire {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px #d43322);
+    animation: particleUp 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.fire-left {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: shake 3s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.fire-left .main-fire {
+    position: absolute;
+    top: 15%;
+    left: -20%;
+    width: 80%;
+    height: 80%;
+    background-color: #ef5a00;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 60% 40%;
+    filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-left .particle-fire {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 10%;
+    height: 10%;
+    background-color: #ef5a00;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px #d43322);
+    animation: particleUp 3s infinite ease-out 0;
+    animation-fill-mode: both;
+}
+
+.fire-bottom .main-fire {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 75%;
+    height: 75%;
+    background-color: #ff7800;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 100% 40%;
+    filter: blur(10px);
+    animation: glow 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+/*
+.snow{
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    animation: wind8 5s cubic-bezier(0.51, 0.01, 0.63, 0.99) infinite alternate;
+    perspective: 100px;
+
+}
+
+.snow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    right: 0%;
+    height: 5000px;
+    background: url(../images/neige4.png) ;
+    animation: fall8 10s linear infinite;
+    transform: translateZ(30px);
+}
+
+@keyframes fall8 {
+    0%{
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes wind8{
+    to {
+        transform: translateX(50px);
+    }
+
+}
+*/
+

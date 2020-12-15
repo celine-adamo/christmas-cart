@@ -1,0 +1,12 @@
+{
+    "name": "vendor/noel",
+    "authors": [
+        {
+            "name": "celine-adamo",
+            "email": "71389471+celine-adamo@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.2"
+    }
+}

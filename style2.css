@@ -1,0 +1,62 @@
+h4{
+    color: whitesmoke;
+}
+
+.snow{
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    animation: wind 5s infinite;
+    perspective: 100px;
+    opacity: 0.4;
+
+
+}
+
+.snow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    right: 0%;
+    height: 5000px;
+    background: url(../images/neige4.png) ;
+    animation: fall 30s linear infinite;
+    transform: translateZ(30px);
+}
+
+@keyframes fall {
+    0%{
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes wind{
+    to {
+        transform: translateX(50px);
+    }
+
+}
+
+#boule{
+    animation: wind 1s cubic-bezier(0.55, 0.01, 0.60, 0.99) infinite alternate;
+    perspective: 100px;
+}
+@keyframes wind {
+    to {
+        transform: translateX(-70px);
+    }
+}
+
+
+#pnoel {
+    animation: wind1 8s cubic-bezier(0.55, 0.20, 0.100, 0.99) infinite ;
+    perspective: 10px;
+}
+
+@keyframes wind1 {
+    to {
+        transform: translateX(1000px);
+    }
+}
+
